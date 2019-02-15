@@ -1,5 +1,5 @@
 node {
-     def listfile = load "${env.WORKSPACE}//jobList.txt"
+     def listfile = load "${env.WORKSPACE}//joblist.txt"
      def finalList = listfile.readLines()
      finalList.each{line ->
      println 'list value is : ' + line }

@@ -1,5 +1,4 @@
-pipeline {
-    agent any
+node {
      def listfile = load "${env.WORKSPACE}//jobList.txt"
      def finalList = listfile.readLines()
      finalList.each{line ->

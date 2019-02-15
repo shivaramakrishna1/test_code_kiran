@@ -4,16 +4,18 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                def listfile = load "${env.WORKSPACE}//jobList.txt"
-
-          def finalList = listfile.readLines()
-        finalList.each{line ->
-        println 'list value is : ' + line
-        }
+                echo 'Building..'
             }
         }
-      
-
-       
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
 }
